@@ -31,6 +31,7 @@ const Label = forwardRef<HTMLDivElement, { className?: string; children?: React.
 ));
 Label.displayName = 'Label';
 
+
 export function AnimatedBeamDemo() {
   const containerRef = useRef<HTMLDivElement>(null);
   const div1Ref = useRef<HTMLDivElement>(null);
