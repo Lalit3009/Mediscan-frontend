@@ -1,9 +1,12 @@
 "use client";
 
+/* tslint:disable */
+
 import { cn } from "@/lib/utils";
 import { AnimatedBeam } from "@/components/magicui/animated-beam";
 import React, { forwardRef, useRef } from "react";
 import Breadcrumb from "@/components/Common/Breadcrumb";
+
 
 const Circle = forwardRef<HTMLDivElement, { className?: string; children?: React.ReactNode }>(({ className, children }, ref) => (
   <div
@@ -31,8 +34,7 @@ const Label = forwardRef<HTMLDivElement, { className?: string; children?: React.
 ));
 Label.displayName = 'Label';
 
-
-export function AnimatedBeamDemo() {
+export default function AnimatedBeamDemo() {
   const containerRef = useRef<HTMLDivElement>(null);
   const div1Ref = useRef<HTMLDivElement>(null);
   const div2Ref = useRef<HTMLDivElement>(null);
@@ -60,13 +62,11 @@ export function AnimatedBeamDemo() {
           <div className="flex h-full w-full flex-row items-stretch justify-between gap-10">
             <div className="flex flex-col justify-center">
               <Circle ref={div7Ref} className="h-16 w-16">
-                {/* <Icons.user className="text-black" /> */}
                 <img src="/images/tech/cxr.jpg" className="h-8 w-6" />
               </Circle>
             </div>
             <div className="flex flex-col justify-center">
               <Circle ref={div6Ref} className="h-16 w-16">
-                {/* <Icons.openai className="h-6 w-6" /> */}
                 <img
                   src="/images/tech/tensorflow-removebg-preview.png"
                   className="h-8 w-8"
@@ -75,25 +75,20 @@ export function AnimatedBeamDemo() {
             </div>
             <div className="flex flex-col justify-center gap-2 text-sm text-primary">
               <Label ref={div1Ref}>
-                {/* <Icons.googleDrive className="h-6 w-6" /> */}
                 <div className="h-30 w-30 text-center">Normal</div>
               </Label>
               <Label ref={div2Ref}>
-                {/* <Icons.googleDocs className="h-6 w-6" /> */}
                 <div className="h-30 w-30 text-center">Covid19</div>
               </Label>
               <Label ref={div3Ref}>
-                {/* <Icons.whatsapp className="h-6 w-6" /> */}
                 <div className="h-30 w-30 text-center">Tuberculosis</div>
               </Label>
               <Label ref={div4Ref}>
-                {/* <Icons.messenger className="h-6 w-6" /> */}
                 <div className="h-30 w-30 text-center">Pneumonia</div>
               </Label>
             </div>
           </div>
 
-          {/* AnimatedBeams */}
           <AnimatedBeam
             containerRef={containerRef}
             fromRef={div1Ref}
@@ -135,5 +130,4 @@ export function AnimatedBeamDemo() {
     </>
   );
 }
-
-export default AnimatedBeamDemo;
+/* tslint:enable comment-format */
