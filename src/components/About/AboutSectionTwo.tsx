@@ -59,9 +59,9 @@ const AboutSectionTwo = () => {
               paragraph="We are students from the Department of Computer Technology at Yeshwantrao Chavan College of Engineering, Nagpur. This project is part of our final-year major project, identified under Group ID M4."
               mb="44px"
             />
-            {students.map((s) => {
+            {students.map((s, i) => {
               return (
-                <div className="mb-5 mt-5 flex w-full items-center">
+                <div className="mb-5 mt-5 flex w-full items-center" key={i}>
                   <div className="mr-5 flex items-center border-r border-body-color border-opacity-10 pr-5 dark:border-white dark:border-opacity-10 xl:mr-3 xl:pr-3 2xl:mr-5 2xl:pr-5">
                     <div className="mr-4">
                       <div className="relative h-10 w-10 overflow-hidden rounded-full">

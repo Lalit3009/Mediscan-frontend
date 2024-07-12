@@ -5,39 +5,31 @@ import { AnimatedBeam } from "@/components/magicui/animated-beam";
 import React, { forwardRef, useRef } from "react";
 import Breadcrumb from "@/components/Common/Breadcrumb";
 
-const Circle = forwardRef<
-  HTMLDivElement,
-  { className?: string; children?: React.ReactNode }
->(({ className, children }, ref) => {
-  return (
-    <div
-      ref={ref}
-      className={cn(
-        "z-10 flex h-12 w-12 items-center justify-center rounded-full border-2 bg-white p-3 shadow-[0_0_20px_-12px_rgba(0,0,0,0.8)]",
-        className,
-      )}
-    >
-      {children}
-    </div>
-  );
-});
+const Circle = forwardRef<HTMLDivElement, { className?: string; children?: React.ReactNode }>(({ className, children }, ref) => (
+  <div
+    ref={ref}
+    className={cn(
+      "z-10 flex h-12 w-12 items-center justify-center rounded-full border-2 bg-white p-3 shadow-[0_0_20px_-12px_rgba(0,0,0,0.8)]",
+      className
+    )}
+  >
+    {children}
+  </div>
+));
+Circle.displayName = 'Circle';
 
-const Label = forwardRef<
-  HTMLDivElement,
-  { className?: string; children?: React.ReactNode }
->(({ className, children }, ref) => {
-  return (
-    <div
-      ref={ref}
-      className={cn(
-        "z-10 flex h-[85px] w-[85px] items-center justify-center rounded-full border-2 bg-white p-3 shadow-[0_0_20px_-12px_rgba(0,0,0,0.8)]",
-        className,
-      )}
-    >
-      {children}
-    </div>
-  );
-});
+const Label = forwardRef<HTMLDivElement, { className?: string; children?: React.ReactNode }>(({ className, children }, ref) => (
+  <div
+    ref={ref}
+    className={cn(
+      "z-10 flex h-[85px] w-[85px] items-center justify-center rounded-full border-2 bg-white p-3 shadow-[0_0_20px_-12px_rgba(0,0,0,0.8)]",
+      className
+    )}
+  >
+    {children}
+  </div>
+));
+Label.displayName = 'Label';
 
 export function AnimatedBeamDemo() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -52,7 +44,7 @@ export function AnimatedBeamDemo() {
   return (
     <>
       <Breadcrumb
-        pageName="How does it works?"
+        pageName="How does it work?"
         description="Our deep learning model has been meticulously designed using a pre-trained architecture and trained on a diverse dataset of over 7000 chest X-ray (CXR) images to classify various lung diseases. To achieve optimal performance, we have implemented advanced techniques such as batch normalization and effective overfitting mitigation strategies.
 
         Utilizing technologies like early stopping, L2 regularization, and dropout, we ensure that the model generalizes well and maintains robust performance. Additionally, data augmentation techniques are employed to enrich the training dataset, ensuring the model is exposed to diverse scenarios.
