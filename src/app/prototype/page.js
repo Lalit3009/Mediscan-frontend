@@ -1,7 +1,7 @@
 "use client";
 
 import Breadcrumb from "@/components/Common/Breadcrumb";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useDropzone } from "react-dropzone";
 import IconUpload from "./image-upload";
 import Bargraph from "./bargraph";
@@ -12,6 +12,8 @@ const Prototype = () => {
   const [loading, setLoading] = useState(true);
   const [data, setData] = useState([]);
   const [label, setLabel] = useState("");
+  const serverLight = useRef(null);
+  const [intervalId, setIntervalId] = useState(0);
 
   const { getRootProps, getInputProps } = useDropzone({
     accept: "image/png, image/jpg, image/jpeg",
@@ -49,15 +51,24 @@ const Prototype = () => {
     }
   }, [file]);
 
-  // useEffect(() => {
-  //   if (file) {
-  //     setTimeout(() => {
-  //       console.log("STATE CHANGED");
-  //       setLabel("Something");
-  //       console.log(label);
-  //     }, 5000);
-  //   }
-  // }, [file]);
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      fetch(`${process.env.NEXT_PUBLIC_API_URL}/`)
+        .then((res) => res.json())
+        .then((json) => {
+          serverLight.current.style.background = "lightgreen";
+          console.log(json);
+          clearInterval(intervalId);
+        })
+        .catch((e) => {
+          console.log("SERVER IS NOT READY\n\nRETRYING IN 5s...\n\n");
+        });
+    }, 5000);
+
+    setIntervalId(intervalId);
+
+    return () => clearInterval(intervalId);
+  }, [setIntervalId]);
 
   async function handleLinkUpload() {
     setLoading(true);
@@ -98,6 +109,18 @@ const Prototype = () => {
       />
 
       <section className="p-[120px]">
+        <div
+          style={{
+            width: "10px",
+            height: "10px",
+            borderRadius: "50%",
+            background: "red",
+            position: "absolute",
+            right: "30px",
+            top: "100px",
+          }}
+          ref={serverLight}
+        />
         {!file && (
           <div className="container">
             <div className="-mx-4 flex flex-col items-center justify-center">
@@ -145,13 +168,15 @@ const Prototype = () => {
             >
               <div>
                 <img src={file.preview} className="aspect-auto w-[400px]" />
-                {(!label)&& <div class="scanner" />}
+                {!label && <div class="scanner" />}
               </div>
               {label && data && (
                 <>
-                  <div className="flex-1 relative">
+                  <div className="relative flex-1">
                     {data ? <Bargraph data={data} /> : "DATA NHI HAI"}
-                    <p className="absolute top-0 right-0 text-2xl text-[#001b89d4] dark:text-[#fff]">Prediction: <b>{label}</b></p>
+                    <p className="absolute right-0 top-0 text-2xl text-[#001b89d4] dark:text-[#fff]">
+                      Prediction: <b>{label}</b>
+                    </p>
                   </div>
                 </>
               )}
