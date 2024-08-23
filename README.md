@@ -1,9 +1,9 @@
-# Tuberculosis (TB) Identification Using Deep Learning
+# Lung diseases Identification Using Deep Learning
 ## Overview
-Tuberculosis (TB) remains a significant global health challenge, with an estimated 10 million new cases reported in 2021, affecting both adults and children. Prompt and reliable identification of TB is crucial in mitigating the disease's impact, particularly in resource-limited settings. This project leverages deep learning techniques to build a robust model for TB identification using chest X-ray images. The model achieves an impressive accuracy of nearly 98% on a separate test dataset, demonstrating its potential as a valuable tool in the fight against TB.
+Lung diseases remains a significant global health challenge, with an estimated 10 million new cases reported in 2021, affecting both adults and children. Prompt and reliable identification of lung diseases are crucial in mitigating the disease's impact, particularly in resource-limited settings. This project leverages deep learning techniques to build a robust model for lung diseases identification using chest X-ray images. The model achieves an impressive accuracy of nearly 98% on a separate test dataset, demonstrating its potential as a valuable tool in the fight against lung diseases.
 
 ## Project Background
-The identification of TB through chest X-ray images is a challenging task that requires sophisticated diagnostic methods. Traditional approaches can be time-consuming and prone to errors, which underscores the need for advanced techniques that can provide quick and reliable results. This project addresses this need by utilizing Convolutional Neural Networks (CNNs) combined with transfer learning and hyperparameter tuning. The dataset used comprises 4200 images, including 3500 normal and 700 TB-infected cases, sourced from the “Tuberculosis (TB) Chest X-ray Database” on Kaggle.
+The identification of lung diseases through chest X-ray images is a challenging task that requires sophisticated diagnostic methods. Traditional approaches can be time-consuming and prone to errors, which underscores the need for advanced techniques that can provide quick and reliable results. This project addresses this need by utilizing Convolutional Neural Networks (CNNs) combined with transfer learning and hyperparameter tuning. The dataset used comprises 7000 images, “Chest X-ray Database” on Kaggle.
 
 ## Methodology
 ### Model Design
@@ -20,7 +20,7 @@ Selectively freezes certain layers of the pre-trained model to retain valuable l
 The model was rigorously trained and evaluated, achieving an accuracy of nearly 98% on the test dataset. While these results are promising, careful interpretation is required, particularly in understanding the potential challenges and limitations of such high accuracy.
 
 ## Frontend Overview
-The frontend of this application is developed using Next.js. Although the focus of this project is on the utility and the background of the TB identification model, the frontend serves as an intuitive interface for users to interact with the model and visualize results. Key features of the frontend include:
+The frontend of this application is developed using Next.js. Although the focus of this project is on the utility and the background of the lung diseases identification model, the frontend serves as an intuitive interface for users to interact with the model and visualize results. Key features of the frontend include:
 
 - User-Friendly Interface: Simplifies the process of uploading chest X-ray images and viewing diagnostic results.
 - Real-Time Feedback: Provides immediate predictions and confidence scores, allowing for quick decision-making.
@@ -47,7 +47,7 @@ To run the frontend locally, follow these steps:
 
 - Clone the repository:
 
-        git clone https://github.com/your-username/tb-identification.git
+        git clone https://github.com/your-username/lung diseases-identification.git
 
 - Navigate to the frontend directory:
 
