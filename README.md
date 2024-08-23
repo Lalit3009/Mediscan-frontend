@@ -30,10 +30,12 @@ The frontend of this application is developed using Next.js. Although the focus 
 This repository also includes the following supporting materials:
 
 - Video Demonstration: A walkthrough of the application and model performance.
-- Research Paper: Detailed documentation of the project's methodology, results, and analysis.
-- Colab Notebook: Access to the model code and implementation for replication and further exploration.
-- Block Diagram: A visual representation of the model's architecture and workflow.
-- List of Advantages: A summary of the benefits and potential applications of the model.
+
+
+- Research Paper: Detailed documentation of the project's methodology, results, and analysis, titled "[Optimized tuberculosis classification system for chest X-ray images: Fusing hyperparameter tuning with transfer learning approaches](https://onlinelibrary.wiley.com/doi/10.1002/eng2.12906)"
+- Colab Notebook: Access to the model code and implementation for replication and further exploration. [click here to visit](https://colab.research.google.com/drive/1C2-Bsngo6XcFNmUCwQpw2dTmJhInSp8h)
+
+
 
 
 ## Conclusion
@@ -43,23 +45,23 @@ This project demonstrates the potential of deep learning models in addressing gl
 # Getting Started
 To run the frontend locally, follow these steps:
 
-Clone the repository:
-bash
-Copy code
-git clone https://github.com/your-username/tb-identification.git
-Navigate to the frontend directory:
-bash
-Copy code
-cd tb-identification/frontend
-Install the dependencies:
-bash
-Copy code
-npm install
-Run the development server:
-bash
-Copy code
-npm run dev
-Open http://localhost:3000 in your browser to view the application.
+- Clone the repository:
+
+        git clone https://github.com/your-username/tb-identification.git
+
+- Navigate to the frontend directory:
+
+        cd mediscan-frontend/
+
+- Install the dependencies:
+
+        npm install
+
+- Run the development server:
+
+        npm run dev
+
+- Open http://localhost:3000 in your browser to view the application.
 
 
 ### License
