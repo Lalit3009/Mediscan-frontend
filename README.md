@@ -9,9 +9,12 @@ The identification of TB through chest X-ray images is a challenging task that r
 ### Model Design
 The core of our model is based on the VGG19 pre-trained neural network, leveraging the principles of transfer learning. The architecture is enhanced with task-specific layers and regularization techniques to ensure robust classification. Key features of the model design include:
 
-### Transfer Learning: Utilizes a pre-trained model to benefit from previously learned features, reducing the need for extensive training from scratch.
-### Hyperparameter Tuning: Fine-tunes the model's parameters to achieve optimal performance.
-### Layer Freezing: Selectively freezes certain layers of the pre-trained model to retain valuable learned features while adapting to the specific task.
+### Transfer Learning: 
+Utilizes a pre-trained model to benefit from previously learned features, reducing the need for extensive training from scratch.
+### Hyperparameter Tuning: 
+Fine-tunes the model's parameters to achieve optimal performance.
+### Layer Freezing: 
+Selectively freezes certain layers of the pre-trained model to retain valuable learned features while adapting to the specific task.
 
 ## Performance
 The model was rigorously trained and evaluated, achieving an accuracy of nearly 98% on the test dataset. While these results are promising, careful interpretation is required, particularly in understanding the potential challenges and limitations of such high accuracy.
@@ -36,6 +39,7 @@ This repository also includes the following supporting materials:
 ## Conclusion
 This project demonstrates the potential of deep learning models in addressing global health challenges like tuberculosis. By combining advanced techniques such as CNNs, transfer learning, and hyperparameter tuning, we have developed a model that not only achieves high accuracy but also offers practical utility in real-world diagnostic scenarios. We invite the community to explore, contribute, and build upon this work.
 
+
 # Getting Started
 To run the frontend locally, follow these steps:
 
@@ -56,6 +60,8 @@ bash
 Copy code
 npm run dev
 Open http://localhost:3000 in your browser to view the application.
-License
+
+
+### License
 This project is licensed under the MIT License.
 
