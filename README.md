@@ -1,4 +1,5 @@
-# Lung diseases Identification Using Deep Learning
+# MediScan: Software For Identification of Lung diseases Using Deep Learning
+
 ## Overview
 Lung diseases remains a significant global health challenge, with an estimated 10 million new cases reported in 2021, affecting both adults and children. Prompt and reliable identification of lung diseases are crucial in mitigating the disease's impact, particularly in resource-limited settings. This project leverages deep learning techniques to build a robust model for lung diseases identification using chest X-ray images. The model achieves an impressive accuracy of nearly 98% on a separate test dataset, demonstrating its potential as a valuable tool in the fight against lung diseases.
 
