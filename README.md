@@ -26,18 +26,19 @@ The model was rigorously trained and evaluated, achieving an accuracy of nearly 
 ## Frontend Overview
 The frontend of this application is developed using Next.js. Although the focus of this project is on the utility and the background of the lung diseases identification model, the frontend serves as an intuitive interface for users to interact with the model and visualize results. Key features of the frontend include:
 
-- User-Friendly Interface: Simplifies the process of uploading chest X-ray images and viewing diagnostic results.
-- Real-Time Feedback: Provides immediate predictions and confidence scores, allowing for quick decision-making.
-- Visualization Tools: Enhances understanding of the model's predictions through clear visual representations.
+- ___User-Friendly Interface:___ Simplifies the process of uploading chest X-ray images and viewing diagnostic results.
+- ___Real-Time Feedback:___ Provides immediate predictions and confidence scores, allowing for quick decision-making.
+- ___Visualization Tools:___ Enhances understanding of the model's predictions through clear visual representations.
 
 ## Supporting Materials
 This repository also includes the following supporting materials:
 
-- Video Demonstration: A walkthrough of the application and model performance.
+- ___Video Demonstration:___ A walkthrough of the application and model performance.
 
 
-- Research Paper: Detailed documentation of the project's methodology, results, and analysis, titled "[Optimized tuberculosis classification system for chest X-ray images: Fusing hyperparameter tuning with transfer learning approaches](https://onlinelibrary.wiley.com/doi/10.1002/eng2.12906)"
-- Colab Notebook: Access to the model code and implementation for replication and further exploration. [click here to visit](https://colab.research.google.com/drive/1C2-Bsngo6XcFNmUCwQpw2dTmJhInSp8h)
+- ___Research Paper:___ Detailed documentation of the project's methodology, results, and analysis, titled "[Optimized tuberculosis classification system for chest X-ray images: Fusing hyperparameter tuning with transfer learning approaches](https://onlinelibrary.wiley.com/doi/10.1002/eng2.12906)"
+  
+- ___Colab Notebook:___ Access to the model code and implementation for replication and further exploration. [click here to visit](https://colab.research.google.com/drive/1C2-Bsngo6XcFNmUCwQpw2dTmJhInSp8h)
 
 
 
