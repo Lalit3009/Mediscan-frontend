@@ -48,7 +48,7 @@ This project demonstrates the potential of deep learning models in addressing gl
 
 
 # Getting Started
-To run the frontend locally, follow these steps:
+After setting up the backend, to run the frontend locally, follow these steps:
 
 - Clone the repository:
 
